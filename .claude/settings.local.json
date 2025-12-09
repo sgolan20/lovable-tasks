@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(copy \"C:\\Users\\USER\\Downloads\\דוגמא לעריכת תמונה בלובאבל.png\" \"g:\\My Drive\\PROJ\\וייב קודינג למנהלי שיווק\\tasks\\lovable-edit-example.png\")",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(copy \"C:\\Users\\USER\\Downloads\\1.png\" \"g:\\My Drive\\PROJ\\וייב קודינג למנהלי שיווק\\tasks\\countdown-example.png\")"
     ]
   }
 }

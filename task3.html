@@ -2,7 +2,7 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>עיצוב דף הנחיתה לצבעי המותג</title>
+    <title>חיבור ל-Cloud וצפייה בלידים</title>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -149,6 +149,19 @@
             font-size: 1.1em;
         }
 
+        .error-box {
+            background: #ffe5e5;
+            border-right: 5px solid #ff5252;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .error-box strong {
+            color: #c62828;
+            font-size: 1.1em;
+        }
+
         .checklist {
             background: #e8f5e9;
             padding: 25px;
@@ -184,31 +197,6 @@
             font-size: 1.5em;
             margin-left: 10px;
             color: #2e7d32;
-        }
-
-        .font-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .font-item {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            border: 2px solid #e0e0e0;
-            transition: border-color 0.2s;
-        }
-
-        .font-item:hover {
-            border-color: #667eea;
-        }
-
-        .font-item strong {
-            color: #667eea;
-            font-size: 1.1em;
         }
 
         .divider {
@@ -278,123 +266,85 @@
 
 <div class="container">
     <div class="header">
-        <h1>🎨 עיצוב דף הנחיתה לצבעי המותג</h1>
-        <p>עכשיו שיש לכם דף נחיתה עובד, הגיע הזמן להתאים אותו לזהות החזותית של המותג שלכם באמצעות פיצ'ר ה-Themes של Lovable.</p>
+        <h1>☁️ חיבור ל-Cloud וצפייה בלידים</h1>
+        <p>עכשיו שיש לכם דף נחיתה עם טופס, הגיע הזמן לחבר אותו לבסיס נתונים כדי לשמור את הלידים ולראות אותם.</p>
     </div>
 
     <div class="content">
 
 <div class="section">
-    <h2>🚀 איך נכנסים ל-Themes?</h2>
-    <ol>
-        <li>לחצו על כפתור ה-<strong>+</strong> שליד Preview</li>
-        <li>בחרו <strong>Design view</strong></li>
-        <li>עברו ללשונית <strong>Themes</strong> בפאנל השמאלי</li>
-    </ol>
+    <h2>מה זה Lovable Cloud?</h2>
+    <p>Lovable Cloud זה המקום שבו נשמר כל המידע מהאתר שלכם:</p>
+    <ul>
+        <li><strong>הפניות מהטפסים</strong> - כל הלידים במקום אחד</li>
+        <li><strong>משתמשים</strong> - אם תרצו להוסיף התחברות</li>
+        <li><strong>קבצים</strong> - תמונות ומסמכים</li>
+    </ul>
+    <p>הכל עובד אוטומטית - פשוט אומרים ל-Lovable מה רוצים והוא מטפל בכל השאר!</p>
 </div>
 
 <div class="divider"></div>
 
 <div class="task-card">
     <span class="task-number">1</span>
-    <h2>משימה 1: בחירת Theme בסיסי 🎯</h2>
-    <p>נסו להחיל אחד מה-Templates המובנים של Lovable וראו איך הדף משתנה.</p>
-    <p><strong>מה לעשות:</strong></p>
+    <h2>משימה 1: הפעלת Cloud בפרויקט ☁️</h2>
+
+    <h3>שלב א' - פתיחת Cloud:</h3>
+    <ol>
+        <li>לחצו על כפתור ה-<strong>+</strong> שליד Preview</li>
+        <li>בחרו <strong>Cloud</strong></li>
+    </ol>
+
+    <h3>שלב ב' - אישור החיבור:</h3>
     <ul>
-        <li>גללו בין ה-Themes המוכנים</li>
-        <li>לחצו על אחד מהם לתצוגה מקדימה</li>
-        <li>לחצו Apply כדי להחיל</li>
+        <li>Lovable ישאל אם להפעיל Cloud לפרויקט</li>
+        <li>לחצו <strong>Allow</strong> לאישור</li>
     </ul>
+
+    <div class="tip-box">
+        <strong>💡 טיפ:</strong> אפשר לשנות את ההגדרות ב-Settings → Account → Tools
+    </div>
 </div>
 
 <div class="divider"></div>
 
 <div class="task-card">
     <span class="task-number">2</span>
-    <h2>משימה 2: יצירת Theme מותאם אישית 🎨</h2>
-    <p>צרו Theme חדש עם צבעי המותג שלכם.</p>
-    <p><strong>מה לעשות:</strong></p>
-    <ul>
-        <li>לחצו <strong>Create</strong> כדי ליצור Theme מהפרויקט הנוכחי</li>
-        <li>ערכו את הצבעים לפי המותג שלכם:
-            <ul>
-                <li><strong>Primary Color</strong> - הצבע הראשי (כפתורים, קישורים)</li>
-                <li><strong>Secondary Color</strong> - צבע משני</li>
-                <li><strong>Background</strong> - צבע רקע</li>
-                <li><strong>Text Color</strong> - צבע טקסט</li>
-            </ul>
-        </li>
-    </ul>
-    <div class="tip-box">
-        <strong>💡 טיפ:</strong> אם יש לכם קובץ עיצוב, העתיקו משם את קודי ה-HEX (למשל #3182ce)
-    </div>
+    <h2>משימה 2: חיבור הטופס לשמירת לידים 📊</h2>
+    <p>בקשו מ-Lovable לשמור את הפניות מהטופס בבסיס הנתונים.</p>
+
+    <p><strong>פרומפט לדוגמא:</strong></p>
+    <code>כשמישהו שולח את טופס יצירת הקשר, שמור את הפרטים שלו בבסיס הנתונים.
+אחרי השליחה תופיע הודעת "תודה! נחזור אליך בהקדם".</code>
+
+    <p>זהו! Lovable יטפל בכל השאר - ייצור טבלה מתאימה וידאג שהמידע יישמר.</p>
 </div>
 
 <div class="divider"></div>
 
 <div class="task-card">
     <span class="task-number">3</span>
-    <h2>משימה 3: התאמת טיפוגרפיה ✍️</h2>
-    <p>שנו את הפונטים כדי שיתאימו למותג.</p>
+    <h2>משימה 3: צפייה בלידים שנשמרו 👀</h2>
+    <p>כאן הקסם קורה - אפשר לראות את כל הלידים שנכנסו!</p>
 
-    <h3>אפשרות א': בחירה מהרשימה הקיימת</h3>
-    <p>הדרך הפשוטה ביותר - בחרו פונט מתוך הרשימה המובנית:</p>
+    <h3>איך נכנסים:</h3>
+    <ol>
+        <li>לחצו על <strong>Cloud</strong> (כפתור ה-+ ליד Preview)</li>
+        <li>בתפריט השמאלי, לחצו על <strong>Database</strong></li>
+        <li>תראו רשימה של כל הטבלאות</li>
+        <li>לחצו על הטבלה <strong>leads</strong></li>
+    </ol>
+
+    <h3>מה רואים:</h3>
     <ul>
-        <li>בתוך ה-Theme, לחצו על <strong>Typography</strong></li>
-        <li>בחרו פונט לכותרות (Headings)</li>
-        <li>בחרו פונט לטקסט רגיל (Body)</li>
-        <li>התאימו גדלים ומרווחים לפי הצורך</li>
+        <li>כל השורות (לידים) שנשמרו</li>
+        <li>אפשר לסנן ולחפש</li>
+        <li>אפשר לערוך ערכים ישירות</li>
+        <li>אפשר למחוק שורות</li>
     </ul>
 
-    <h3>אפשרות ב': העלאת פונט מותאם אישית</h3>
-    <p>אם יש לכם פונט ייחודי למותג:</p>
-    <ul>
-        <li>גררו קובץ פונט (TTF או OTF) ישירות לתוך Lovable</li>
-        <li>כתבו פרומפט שמבקש להשתמש בפונט</li>
-    </ul>
-    <p><strong>פרומפט לדוגמא:</strong></p>
-    <code>השתמש בפונט שהעלתי ככותרות ראשיות בכל הדף</code>
-
-    <h3>אפשרות ג': שימוש ב-Google Fonts</h3>
-    <p><strong>פרומפט לדוגמא:</strong></p>
-    <code>השתמש בפונט Heebo מ-Google Fonts לכל הטקסטים בעברית.
-ודא שהפונט נטען באמצעות useEffect React hook.</code>
-
-    <h3>פונטים מומלצים לעברית:</h3>
-    <div class="font-list">
-        <div class="font-item">
-            <strong>Heebo</strong><br>
-            נקי ומודרני
-        </div>
-        <div class="font-item">
-            <strong>Assistant</strong><br>
-            ידידותי וקריא
-        </div>
-        <div class="font-item">
-            <strong>Rubik</strong><br>
-            מעוגל ונעים
-        </div>
-        <div class="font-item">
-            <strong>Open Sans Hebrew</strong><br>
-            קלאסי ומקצועי
-        </div>
-    </div>
-</div>
-
-<div class="divider"></div>
-
-<div class="task-card">
-    <span class="task-number">4</span>
-    <h2>משימה 4: Visual Edits - עריכה ישירה על הדף 🖱️</h2>
-    <p>השתמשו ב-Visual Edit לשינויים נקודתיים.</p>
-    <p><strong>מה לעשות:</strong></p>
-    <ul>
-        <li>עברו ללשונית <strong>Visual edits</strong></li>
-        <li>לחצו על אלמנט בדף (כפתור, כותרת, תמונה)</li>
-        <li>שנו צבע, טקסט, או מרווחים מהסרגל הצדדי</li>
-    </ul>
     <div class="tip-box">
-        <strong>💡 טיפ:</strong> החזיקו Cmd/Ctrl כדי לבחור כמה אלמנטים יחד
+        <strong>💡 טיפ:</strong> אין צורך לכתוב SQL! הכל נעשה דרך ממשק ויזואלי פשוט
     </div>
 </div>
 
@@ -402,10 +352,28 @@
 
 <div class="section">
     <h2>💡 טיפים חשובים</h2>
-    <p>📌 <strong>לא עולה קרדיטים!</strong> עריכה ויזואלית לא מנכה קרדיטים (חוץ מאלמנטים דינמיים)</p>
-    <p>📌 <strong>שמירה ושיתוף:</strong> ה-Theme נשמר ב-Workspace וזמין לכל הפרויקטים</p>
-    <p>📌 <strong>ייבוא CSS:</strong> אם יש לכם קובץ CSS קיים, אפשר לייבא אותו ישירות</p>
-    <p>📌 <strong>תצוגה מקדימה:</strong> כל שינוי נראה בזמן אמת לפני שמירה</p>
+    <p>📌 <strong>חינם לנסות:</strong> כל Workspace מקבל שימוש חינמי בחודש - מספיק להרבה פרויקטים</p>
+    <p>📌 <strong>פשוט לתפעול:</strong> אין צורך בידע טכני - הכל דרך לחיצות וממשק פשוט</p>
+    <p>📌 <strong>עדכון מיידי:</strong> ברגע שמישהו שולח טופס - רואים את זה מיד ב-Cloud</p>
+    <p>📌 <strong>שימו לב:</strong> ברגע שמפעילים Cloud בפרויקט, אי אפשר לבטל את זה</p>
+</div>
+
+<div class="divider"></div>
+
+<div class="error-box">
+    <h2>🔧 משהו לא עובד?</h2>
+
+    <p><strong>הטופס לא שומר נתונים:</strong></p>
+    <ul>
+        <li>ודאו שה-Cloud מופעל (יש סימן ענן)</li>
+        <li>נסו לרענן את הדף</li>
+    </ul>
+
+    <p><strong>לא רואים את הלידים:</strong></p>
+    <ul>
+        <li>לחצו Refresh בממשק ה-Database</li>
+        <li>ודאו שהטופס נשלח בהצלחה</li>
+    </ul>
 </div>
 
 <div class="divider"></div>
@@ -413,11 +381,9 @@
 <div class="checklist">
     <h2>✅ רשימת בדיקה לפני סיום</h2>
     <ul>
-        <li>צבע ראשי מתאים למותג</li>
-        <li>צבע כפתורים בולט וקריא</li>
-        <li>פונטים נקיים וקריאים</li>
-        <li>ניגודיות טובה בין טקסט לרקע</li>
-        <li>העיצוב נראה טוב במובייל</li>
+        <li>Cloud מופעל בפרויקט</li>
+        <li>הטופס שומר פניות בבסיס הנתונים</li>
+        <li>אני יכול/ה לראות לידים ב-Cloud → Database</li>
     </ul>
 </div>
 

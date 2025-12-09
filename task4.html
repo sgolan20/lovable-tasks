@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>פרסום דף הנחיתה לאוויר</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Heebo', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin: 40px 0 20px 0;
+            color: #667eea;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            margin: 30px 0 15px 0;
+            color: #764ba2;
+        }
+
+        .section {
+            background: #f8f9ff;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-right: 5px solid #667eea;
+        }
+
+        .task-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .task-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .task-number {
+            display: block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-left: 15px;
+            float: right;
+        }
+
+        code {
+            display: block;
+            background: #f5f5f5;
+            color: #92400e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            direction: ltr;
+            text-align: left;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            overflow-x: auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 2px solid #e5e5e5;
+        }
+
+        ul, ol {
+            padding-right: 25px;
+            margin: 15px 0;
+        }
+
+        li {
+            margin: 12px 0;
+            padding-right: 10px;
+        }
+
+        .tip-box {
+            background: #fff3cd;
+            border-right: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .tip-box strong {
+            color: #856404;
+            font-size: 1.1em;
+        }
+
+        .success-box {
+            background: #e8f5e9;
+            border-right: 5px solid #4caf50;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .success-box strong {
+            color: #2e7d32;
+            font-size: 1.1em;
+        }
+
+        .warning-box {
+            background: #fff3e0;
+            border-right: 5px solid #ff9800;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .warning-box strong {
+            color: #e65100;
+            font-size: 1.1em;
+        }
+
+        .checklist {
+            background: #e8f5e9;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        .checklist h2 {
+            color: #2e7d32;
+            border-bottom-color: #2e7d32;
+            margin-top: 0;
+        }
+
+        .checklist ul {
+            list-style: none;
+            padding-right: 0;
+        }
+
+        .checklist li {
+            padding: 12px;
+            margin: 10px 0;
+            background: white;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+
+        .checklist li:hover {
+            background: #c8e6c9;
+        }
+
+        .checklist li::before {
+            content: "☐ ";
+            font-size: 1.5em;
+            margin-left: 10px;
+            color: #2e7d32;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(to left, transparent, #667eea, transparent);
+            margin: 40px 0;
+        }
+
+        strong {
+            color: #667eea;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            text-decoration: none;
+            font-size: 1.8em;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
+        }
+
+        .back-button-tooltip {
+            position: absolute;
+            right: 70px;
+            background: #333;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            white-space: nowrap;
+            font-size: 0.5em;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-button:hover .back-button-tooltip {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .back-button {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                left: 20px;
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>🚀 העלאת הדף לאוויר</h1>
+        <p>סיימתם לבנות את דף הנחיתה? מעולה! עכשיו נלמד איך להעלות אותו לאינטרנט כך שכולם יוכלו לראות אותו.</p>
+    </div>
+
+    <div class="content">
+
+<div class="section">
+    <h2>מה קורה כשמעלים את הדף?</h2>
+    <p>כשאתם מפרסמים את הדף, הוא הופך לאתר אמיתי באינטרנט!</p>
+    <ul>
+        <li>🌐 <strong>כתובת אינטרנט</strong> - תקבלו קישור שאפשר לשלוח לכל אחד</li>
+        <li>📱 <strong>עובד בכל מכשיר</strong> - מחשב, טלפון, טאבלט</li>
+        <li>🔒 <strong>מאובטח אוטומטית</strong> - Lovable מוסיף הגנה (HTTPS) בחינם</li>
+        <li>⚡ <strong>מהיר</strong> - הדף נטען מהר בכל מקום בעולם</li>
+    </ul>
+</div>
+
+<div class="divider"></div>
+
+<div class="task-card">
+    <span class="task-number">1</span>
+    <h2>משימה 1: העלאת הדף לאינטרנט 🎯</h2>
+    <p>זה הרגע הגדול! בלחיצה אחת הדף שלכם יהיה באוויר.</p>
+
+    <h3>איך עושים את זה:</h3>
+    <ol>
+        <li>חפשו את כפתור <strong>Publish</strong> (פרסם) בפינה הימנית העליונה של המסך</li>
+        <li>ייפתח חלון עם הגדרות - בינתיים אפשר להשאיר הכל כמו שזה</li>
+        <li>לחצו על הכפתור <strong>Publish</strong> בתחתית החלון</li>
+        <li>המתינו כדקה עד שה-Lovable מכין את הדף</li>
+        <li>יופיע חלון עם הקישור לדף שלכם!</li>
+    </ol>
+
+    <div class="success-box">
+        <strong>🎉 הצלחתם!</strong> הדף שלכם עכשיו באינטרנט! הכתובת נראית ככה:
+        <code>https://שם-הפרויקט-שלכם.lovable.app</code>
+    </div>
+
+    <h3>איפה למצוא את הקישור אחר כך?</h3>
+    <p>סגרתם את החלון בטעות? לא נורא:</p>
+    <ol>
+        <li>לחצו שוב על <strong>Publish</strong></li>
+        <li>הקישור יופיע בחלון</li>
+        <li>לחצו על <strong>Copy link</strong> (העתק קישור) כדי להעתיק אותו</li>
+    </ol>
+
+    <div class="tip-box">
+        <strong>💡 טיפ:</strong> העתיקו את הקישור ושמרו אותו - תרצו לשלוח אותו ללקוחות, לשים בפרסומות, או לשתף ברשתות החברתיות!
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="task-card">
+    <span class="task-number">2</span>
+    <h2>משימה 2: עדכון הדף לאחר שינויים 🔄</h2>
+    <p>עשיתם שינויים בדף ורוצים שהם יופיעו גם באתר החי? קל מאוד!</p>
+
+    <div class="warning-box">
+        <strong>⚠️ חשוב לדעת:</strong> שינויים שאתם עושים ב-Lovable לא מתעדכנים אוטומטית באתר החי. צריך ללחוץ על "עדכן" כדי שהשינויים יעלו.
+    </div>
+
+    <h3>איך לעדכן:</h3>
+    <ol>
+        <li>עשו את השינויים שרציתם בדף (טקסט, תמונות, צבעים...)</li>
+        <li>לחצו על <strong>Publish</strong></li>
+        <li>בחלון שנפתח, לחצו על <strong>Update</strong> (עדכן)</li>
+        <li>תוך פחות מדקה - הדף המעודכן באוויר!</li>
+    </ol>
+
+    <div class="tip-box">
+        <strong>💡 טיפ:</strong> הקישור נשאר אותו דבר! לא צריך לשלוח קישור חדש - כל מי שיש לו את הקישור יראה את הגרסה החדשה.
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="task-card">
+    <span class="task-number">3</span>
+    <h2>משימה 3: התאמה אישית של כתובת האתר 🏷️</h2>
+    <p>רוצים כתובת יותר יפה? אפשר לשנות את השם שמופיע לפני <strong>.lovable.app</strong></p>
+
+    <h3>איך לשנות:</h3>
+    <ol>
+        <li>לחצו על <strong>Publish</strong></li>
+        <li>בשדה <strong>Website address</strong> (כתובת האתר) - מחקו את השם הנוכחי</li>
+        <li>כתבו שם חדש (באנגלית, ללא רווחים)</li>
+        <li>לחצו <strong>Update</strong></li>
+    </ol>
+
+    <p><strong>לדוגמא:</strong></p>
+    <ul>
+        <li>במקום: <code>https://abc123xyz.lovable.app</code></li>
+        <li>תקבלו: <code>https://my-landing-page.lovable.app</code></li>
+    </ul>
+
+    <div class="tip-box">
+        <strong>💡 טיפ:</strong> בחרו שם קצר וברור שקשור לעסק שלכם. למשל: <strong>dana-yoga</strong> או <strong>coffeeshop-tlv</strong>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="task-card">
+    <span class="task-number">4</span>
+    <h2>משימה 4: חיבור דומיין משלכם (אופציונלי) 🌐</h2>
+    <p>רוצים שהדף יופיע בכתובת שלכם כמו <strong>www.yoursite.co.il</strong>? אפשר!</p>
+
+    <div class="warning-box">
+        <strong>📋 לפני שמתחילים - מה צריך:</strong>
+        <ul>
+            <li>חבילת Lovable בתשלום (לא זמין בחבילה החינמית)</li>
+            <li>דומיין (כתובת אינטרנט) שרכשתם - למשל מ-GoDaddy, Namecheap, או כל ספק אחר</li>
+            <li>גישה להגדרות הדומיין אצל הספק</li>
+        </ul>
+    </div>
+
+    <h3>שלב 1: פתיחת הגדרות הדומיין ב-Lovable</h3>
+    <ol>
+        <li>לחצו על <strong>Publish</strong></li>
+        <li>גללו למטה עד שתראו <strong>Custom domain</strong> (דומיין מותאם אישית)</li>
+        <li>לחצו על <strong>Connect domain</strong> (חבר דומיין)</li>
+    </ol>
+
+    <h3>שלב 2: הזנת הכתובת</h3>
+    <ol>
+        <li>כתבו את הדומיין שלכם, למשל: <code>www.yoursite.co.il</code></li>
+        <li>לחצו <strong>Connect domain</strong></li>
+        <li>לחצו <strong>Continue</strong> (המשך)</li>
+    </ol>
+
+    <h3>שלב 3: חיבור הדומיין (בחרו אחת מהאפשרויות)</h3>
+
+    <div class="section" style="margin-top: 20px;">
+        <h3 style="margin-top: 0;">אפשרות א' - חיבור אוטומטי (הכי קל!):</h3>
+        <p>אם ספק הדומיין שלכם מופיע ברשימה:</p>
+        <ol>
+            <li>בחרו את הספק מהרשימה</li>
+            <li>התחברו לחשבון שלכם</li>
+            <li>אשרו את החיבור</li>
+            <li>סיימתם! Lovable יעשה את כל השאר</li>
+        </ol>
+    </div>
+
+    <div class="section" style="margin-top: 20px;">
+        <h3 style="margin-top: 0;">אפשרות ב' - חיבור ידני:</h3>
+        <p>אם הספק שלכם לא ברשימה, תצטרכו להוסיף הגדרות בעצמכם:</p>
+        <ol>
+            <li>גללו למטה ולחצו על <strong>Manual setup</strong> (הגדרה ידנית)</li>
+            <li>Lovable יציג לכם שתי רשומות להעתקה:
+                <ul>
+                    <li><strong>A Record</strong> - העתיקו את הערך</li>
+                    <li><strong>TXT Record</strong> - העתיקו את הערך</li>
+                </ul>
+            </li>
+            <li>היכנסו לאתר ספק הדומיין שלכם (GoDaddy, Namecheap וכו')</li>
+            <li>חפשו את הגדרות ה-<strong>DNS</strong></li>
+            <li>הוסיפו את שתי הרשומות שהעתקתם</li>
+            <li>שמרו וחזרו ל-Lovable</li>
+            <li>לחצו <strong>Done</strong> (סיום)</li>
+        </ol>
+    </div>
+
+    <div class="warning-box">
+        <strong>⏰ סבלנות!</strong> אחרי שמחברים דומיין, צריך להמתין. לפעמים זה לוקח כמה דקות, ולפעמים עד 72 שעות (בדרך כלל פחות מכמה שעות). זה תהליך טכני שקורה ברקע ואין מה לעשות - פשוט לחכות.
+    </div>
+
+    <div class="success-box">
+        <strong>🔒 אבטחה בחינם:</strong> Lovable אוטומטית מוסיף אבטחה (SSL) לדומיין שלכם - האתר יהיה מאובטח עם מנעול ירוק בדפדפן!
+    </div>
+
+    <div class="tip-box">
+        <strong>💡 שימו לב:</strong> אם אתם רוצים שגם <strong>www.yoursite.co.il</strong> וגם <strong>yoursite.co.il</strong> (בלי www) יעבדו - צריך להוסיף את שניהם בנפרד ב-Lovable.
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+    <h2>💡 שאלות נפוצות</h2>
+
+    <h3>האם אפשר לחזור לגרסה קודמת?</h3>
+    <p>כן! Lovable שומר את כל הגרסאות. אם משהו השתבש, תמיד אפשר לחזור אחורה.</p>
+
+    <h3>כמה עולה לפרסם?</h3>
+    <p>פרסום בכתובת .lovable.app כלול בכל החבילות (גם החינמית). דומיין מותאם אישית דורש חבילה בתשלום.</p>
+
+    <h3>האם הדף יישאר באוויר לתמיד?</h3>
+    <p>כן, כל עוד יש לכם חשבון Lovable פעיל.</p>
+
+    <h3>אפשר לפרסם כמה דפים?</h3>
+    <p>כן! כל פרויקט ב-Lovable יכול להיות מפורסם בנפרד עם כתובת משלו.</p>
+</div>
+
+<div class="divider"></div>
+
+<div class="checklist">
+    <h2>✅ רשימת בדיקה לפני סיום</h2>
+    <ul>
+        <li>העליתי את הדף ויש לי את הקישור</li>
+        <li>בדקתי שהדף נראה טוב במחשב</li>
+        <li>בדקתי שהדף נראה טוב בטלפון</li>
+        <li>הטופס עובד ושולח הודעות (אם יש טופס)</li>
+        <li>שיתפתי את הקישור עם מישהו לבדיקה</li>
+    </ul>
+</div>
+
+    </div>
+</div>
+
+<a href="index.html" class="back-button">
+    <span class="back-button-tooltip">חזרה לכל המשימות</span>
+    ⬅️
+</a>
+
+</body>
+</html>
