@@ -376,6 +376,111 @@ strong {
 
 /* Responsive */
 @media (max-width: 768px) {
+    body {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .container {
+        margin: 20px 10px;
+        border-radius: 15px;
+    }
+
+    .header {
+        padding: 30px 20px;
+    }
+
+    .header h1 {
+        font-size: 2.2em;
+        margin-bottom: 12px;
+    }
+
+    .header-number {
+        font-size: 3em;
+    }
+
+    .header p {
+        font-size: 1.15em;
+    }
+
+    .content {
+        padding: 25px 20px;
+    }
+
+    h2 {
+        font-size: 1.6em;
+        margin: 30px 0 15px 0;
+    }
+
+    h3 {
+        font-size: 1.3em;
+        margin: 25px 0 12px 0;
+    }
+
+    p {
+        font-size: 1.15em;
+        margin: 10px 0;
+    }
+
+    strong {
+        font-size: 1.05em;
+    }
+
+    .section,
+    .task-card,
+    .tip-box,
+    .error-box,
+    .success-box,
+    .warning-box {
+        padding: 20px;
+        margin: 15px 0;
+    }
+
+    .checklist {
+        padding: 20px;
+    }
+
+    .checklist li {
+        font-size: 1.1em;
+    }
+
+    .tip-box strong,
+    .error-box strong,
+    .success-box strong,
+    .warning-box strong {
+        font-size: 1.15em;
+    }
+
+    .tip-box,
+    .error-box,
+    .success-box,
+    .warning-box {
+        font-size: 1.1em;
+    }
+
+    ul, ol {
+        font-size: 1.1em;
+        padding-right: 30px;
+    }
+
+    li {
+        margin: 10px 0;
+        font-size: 1.1em;
+    }
+
+    code {
+        font-size: 0.95em;
+        padding: 15px;
+        line-height: 1.6;
+    }
+
+    .task-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+        line-height: 40px;
+    }
+
     .back-button {
         width: 50px;
         height: 50px;
@@ -393,8 +498,10 @@ strong {
     }
 
     .brand-logo {
-        width: 120px;
-        margin-bottom: 10px;
+        width: 70px;
+        top: 15px;
+        left: 15px;
+        padding: 6px;
     }
 }
 
