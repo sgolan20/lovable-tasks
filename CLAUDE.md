@@ -42,7 +42,7 @@ Simply open the HTML files in a web browser to preview changes locally.
 - Grid layout showing task cards (2 available, 2 locked as examples)
 - Purple gradient background theme (#667eea to #764ba2)
 - Responsive design with animations (fadeIn effects)
-- Task cards with hover effects (translateY, shadow)
+- Task cards with hover effects (translateY, shadow).
 
 ### task1.html & task2.html
 Both task pages share consistent styling:
